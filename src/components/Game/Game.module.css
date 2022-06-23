@@ -1,0 +1,41 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+
+.wrapper>div:first-child {
+  width: calc(100vw - 28rem);
+  height: 100%;
+}
+
+.wrapper>div:nth-child(2) {
+  width: 28rem;
+  height: 100%;
+}
+
+.mobile>div {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.mobile>div:nth-child(2) {
+  position: absolute;
+  background-color: #f5f5f7;
+  z-index: 9;
+}
+
+.mobile .menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.mobile .menu img {
+  height: 2rem;
+}

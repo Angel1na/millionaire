@@ -1,0 +1,22 @@
+// {
+//     "extends": ["airbnb", "airbnb/hooks", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
+//     "env": {
+//       "node": true,
+//       "es6": true,
+//       "browser": true
+//     },
+//     "rules": {
+//       "no-console": "off",
+//       "linebreak-style": ["error", "unix"],
+//       "import/extensions": [
+//          "error",
+//          "ignorePackages",
+//          {
+//            "js": "never",
+//            "jsx": "never",
+//            "ts": "never",
+//            "tsx": "never"
+//          }
+//       ]
+//     }
+// }

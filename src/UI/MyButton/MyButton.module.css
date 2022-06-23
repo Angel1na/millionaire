@@ -1,0 +1,18 @@
+.btn {
+  margin-top: 4rem;
+  cursor: pointer;
+  width: 100%;
+  background-color: rgba(40, 105, 232, 0.8);
+  border-radius: 12px;
+  text-align: center;
+  line-height: 4rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  background-color: rgba(40, 105, 232, 1);
+}

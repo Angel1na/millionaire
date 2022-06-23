@@ -1,0 +1,132 @@
+.diamond {
+  /* width: 24rem; */
+  width: 100%;
+  /* min-width: 20rem; */
+  height: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.small {
+  height: 3rem;
+}
+
+.diamondGap {
+  /* width: 24rem; */
+  width: 100%;
+  height: 4rem;
+  position: absolute;
+  z-index: 1;
+  background-color: #ccc;
+  clip-path: polygon(0 calc(2rem - 1px), 0 calc(2rem + 1px), 100% calc(2rem + 1px), 100% calc(2rem - 1px));
+}
+
+.small .diamondGap {
+  clip-path: polygon(0 calc(1.5rem - 1px), 0 calc(1.5rem + 1px), 100% calc(1.5rem + 1px), 100% calc(1.5rem - 1px));
+}
+
+.current .diamondGap {
+  background-color: #2869E8CC;
+}
+
+.diamondOuter {
+  width: calc(100% - 4rem);
+  height: 4rem;
+  position: absolute;
+  left: 2rem;
+  z-index: 2;
+  background-color: #ccc;
+  /* clip-path: polygon(0 2rem, 2rem 0, 18rem 0, 20rem 2rem, 18rem 4rem, 2rem 4rem); */
+  clip-path: polygon(0 2rem, 2rem 0, calc(100% - 2rem) 0, 100% 2rem, calc(100% - 2rem) 4rem, 2rem 4rem);
+}
+
+.small .diamondOuter {
+  height: 3rem;
+  clip-path: polygon(0 1.5rem, 1.5rem 0, calc(100% - 1.5rem) 0, 100% 1.5rem, calc(100% - 1.5rem) 3rem, 1.5rem 3rem);
+}
+
+.current .diamondOuter {
+  background-color: #2869E8CC;
+}
+
+.correct .diamondOuter {
+  background-color: #51B366;
+}
+
+.wrong .diamondOuter {
+  background-color: #EC5974;
+}
+
+.diamondInner {
+  width: calc(100% - 4rem);
+  height: 4rem;
+  position: absolute;
+  left: 2rem;
+  z-index: 3;
+  background-color: #fff;
+  transform: scale(0.99, 0.95);
+  clip-path: polygon(0 2rem, 2rem 0, calc(100% - 2rem) 0, 100% 2rem, calc(100% - 2rem) 4rem, 2rem 4rem);
+}
+
+.small .diamondInner {
+  height: 3rem;
+  clip-path: polygon(0 1.5rem, 1.5rem 0, calc(100% - 1.5rem) 0, 100% 1.5rem, calc(100% - 1.5rem) 3rem, 1.5rem 3rem);
+}
+
+.correct .diamondInner {
+  background-color: #f6fbf7;
+}
+
+.wrong .diamondInner {
+  background-color: #fef7f8;
+}
+
+.diamondText {
+  width: calc(100% - 4rem);
+  height: 4rem;
+  position: absolute;
+  left: 2rem;
+  z-index: 4;
+  line-height: 4rem;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #1C1C21;
+  cursor: pointer;
+}
+
+.small .diamondText {
+  height: 3rem;
+  line-height: 3rem;
+  cursor: default;
+}
+
+.diamondText>div {
+  line-height: 1;
+  text-align: left;
+  margin: 0 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.diamondText>span {
+  line-height: 1;
+}
+
+.diamondText>div>span:first-child {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #2869E8CC;
+}
+
+.current .diamondText {
+  color: #2869E8CC;
+}
+
+.passed .diamondText {
+  color: #D0D0D8;
+}
